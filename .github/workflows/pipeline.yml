@@ -48,7 +48,7 @@ jobs:
      - name: Create Build
        run: mvn clean package
      - name: Upload JAR artifact
-       uses: actions/upload-artifact@v4
+       uses: actions/upload-artifact@v7.0.0
        with:
         name: app-jar
         path: target/*.jar 
