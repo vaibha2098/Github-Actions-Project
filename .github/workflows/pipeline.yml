@@ -57,7 +57,4 @@ jobs:
         # Disabling shallow clones is recommended for improving the relevancy of reporting
         fetch-depth: 0
      - name: SonarQube Scan
-       uses: SonarSource/sonarqube-scan-action@v7.0.0 # Ex: v4.1.0 or sha1, See the latest version at https://github.com/marketplace/actions/official-sonarqube-scan
-       env:
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+       run: mvn sonar:sonar -Dsonar.projectKey=GC-Bank -Dsonar.organization=GC-Bank -Dsonar.host.url=http://13.201.47.17:9000/ -Dsonar.login=squ_2c49f63970bcc95331fa5b49cd2ad31a35901d2d
