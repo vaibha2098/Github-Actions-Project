@@ -36,7 +36,7 @@ jobs:
 
   build_and_scan:
     runs-on: self-hosted
-    needs: compile
+    needs: test
     steps:
      - uses: actions/checkout@v4
      - name: Set up JDK 17
