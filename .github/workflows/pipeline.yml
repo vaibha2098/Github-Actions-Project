@@ -24,5 +24,5 @@ jobs:
     needs: compile
     runs-on: self-hosted
     steps:
-      - name: Run Test
-        run: mvn test
+      - name: Create Build
+        run: mvn clean package
